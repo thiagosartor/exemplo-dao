@@ -7,6 +7,7 @@ Esse repositório foi criado para exemplificar o padrão de objeto de acesso a d
 
 Script:
 
+```
 CREATE DATABASE `mercado_db`;
 
 USE `mercado_db`;
@@ -19,7 +20,7 @@ CREATE TABLE `tb_produto` (
   `qnt_estoque` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 );
-
+```
 
 # Linguagem de programação
 - C#: Visual Studio 2019 / WindowsForms/ .NET Framewordk 4.7.2 / 
