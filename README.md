@@ -23,6 +23,14 @@ CREATE TABLE `tb_produto` (
 ```
 
 # Linguagem de programação
-- C#: Visual Studio 2019 / WindowsForms/ .NET Framewordk 4.7.2 / 
+- C#: Desktop WindowsForms/ .NET Framewordk 4.7.2
 
-- Para integrar o MySQL com o C#, precisa estar instalado o connector .NET do MySQL.
+- Para integrar o MySQL com o C# é preciso  instalar o connector .NET do MySQL.
+
+# Arquitetura
+1. Apresentação
+    - Projeto WindowsForms: Telas
+2. Dominio
+    - Projeto ClassLibrary: Classes de dominio
+3. Acesso a dados
+    - Projeto ClassLibrary: Classes DAO
