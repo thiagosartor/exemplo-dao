@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Mercado.WinApp
@@ -20,7 +13,6 @@ namespace Mercado.WinApp
         private void btnBuscarTodos_Click(object sender, EventArgs e)
         {
             listaBusca.Items.Clear();
-
         }
 
         private void btnBuscarPorNome_Click(object sender, EventArgs e)
