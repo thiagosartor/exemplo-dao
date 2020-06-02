@@ -79,15 +79,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Mercado.Dados\Mercado.Dados.csproj">
-      <Project>{9220D36B-8848-461F-9070-7E7B138AB3BE}</Project>
-      <Name>Mercado.Dados</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Mercado.Dominio\Mercado.Dominio.csproj">
-      <Project>{A6DDAF6B-A355-4CDF-845A-D31AC6886B38}</Project>
-      <Name>Mercado.Dominio</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
