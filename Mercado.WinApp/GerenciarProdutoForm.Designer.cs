@@ -45,18 +45,21 @@
             this.listaBuscaPorNome = new System.Windows.Forms.ListBox();
             this.btnBuscarPorNome = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lbProduto = new System.Windows.Forms.Label();
             this.numQntEstoque = new System.Windows.Forms.NumericUpDown();
             this.btnBuscarId = new System.Windows.Forms.Button();
-            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.dgvListaProdutos = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numQntEstoque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // listaBusca
@@ -226,6 +229,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnDelete);
             this.groupBox4.Controls.Add(this.btnAtualizar);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.txtId);
@@ -239,6 +243,16 @@
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Atualizar estoque";
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Location = new System.Drawing.Point(223, 91);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(73, 26);
+            this.btnAtualizar.TabIndex = 14;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // label6
             // 
@@ -261,9 +275,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(44, 159);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 17);
+            this.label5.Size = new System.Drawing.Size(86, 17);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Quantode:";
+            this.label5.Text = "Quantidade:";
             // 
             // lbProduto
             // 
@@ -277,7 +291,12 @@
             // 
             // numQntEstoque
             // 
-            this.numQntEstoque.Location = new System.Drawing.Point(125, 158);
+            this.numQntEstoque.Location = new System.Drawing.Point(135, 157);
+            this.numQntEstoque.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.numQntEstoque.Name = "numQntEstoque";
             this.numQntEstoque.Size = new System.Drawing.Size(83, 22);
             this.numQntEstoque.TabIndex = 6;
@@ -292,21 +311,32 @@
             this.btnBuscarId.UseVisualStyleBackColor = true;
             this.btnBuscarId.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnAtualizar
+            // btnDelete
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(223, 110);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(73, 26);
-            this.btnAtualizar.TabIndex = 14;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            this.btnDelete.Location = new System.Drawing.Point(223, 123);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(73, 26);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "Deletar";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // dgvListaProdutos
+            // 
+            this.dgvListaProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaProdutos.Location = new System.Drawing.Point(662, 45);
+            this.dgvListaProdutos.Name = "dgvListaProdutos";
+            this.dgvListaProdutos.RowHeadersWidth = 51;
+            this.dgvListaProdutos.RowTemplate.Height = 24;
+            this.dgvListaProdutos.Size = new System.Drawing.Size(240, 150);
+            this.dgvListaProdutos.TabIndex = 10;
             // 
             // GerenciarProdutoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 449);
+            this.ClientSize = new System.Drawing.Size(913, 449);
+            this.Controls.Add(this.dgvListaProdutos);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -324,6 +354,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numQntEstoque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaProdutos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -354,6 +385,8 @@
         private System.Windows.Forms.Label lbProduto;
         private System.Windows.Forms.NumericUpDown numQntEstoque;
         private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.DataGridView dgvListaProdutos;
     }
 }
 
